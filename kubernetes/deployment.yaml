@@ -1,0 +1,32 @@
+# Update <REGISTRY> <NAMESPACE> values before use
+# cognizant-chef-recipe-mobile.us-south.cf.appdomain.cloud
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cognizant-chef-recipe-mobile-mobile
+  labels:
+    app: cognizant-chef-recipe-mobile
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cognizant-chef-recipe-mobile
+  template:
+    metadata:
+      labels:
+        app: cognizant-chef-recipe-mobile
+    spec:
+      containers:
+      - name: cognizant-chef-recipe-mobile
+        image: <REGISTRY>/<NAMESPACE>/
+        ports:
+        - containerPort: 8080
+        imagePullPolicy: Always
+        env:
+        - name: CLOUDANT_URL
+          valueFrom:
+            secretKeyRef:
+              name: cloudant
+              key: url
+              optional: true
+

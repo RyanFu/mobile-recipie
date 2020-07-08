@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "0be34755-b09b-4166-9237-0e9de2eea5e1",
+		"name": "chef recipy IBM Cloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cloud Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://cognizant-chef-recipe.us-south.cf.appdomain.cloud",
+					"protocol": "https",
+					"host": [
+						"cognizant-chef-recipe",
+						"us-south",
+						"cf",
+						"appdomain",
+						"cloud"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cloud create new record",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\":\"Food\",\n\t\"name\":\"chiken\",\n\t\"description\":\"chiket great recipe text here\",\n\t\"userID\":\"1\",\n\t\"quantity\":\"4\",\n\t\"unit\":\"pounds\",\n\t\"location\":\"Atlanta\",\n\t\"contact\":\"https://lh3.googleusercontent.com/vFARDwBDYdO3mEwYCuVgarX41Qqb_wG9atyeapmMSlStanJnvM0-giiMRim9GsjpHD0LtzIvvFDjW5jFI38DJQ\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cognizant-chef-recipe.us-south.cf.appdomain.cloud/api/resource",
+					"protocol": "https",
+					"host": [
+						"cognizant-chef-recipe",
+						"us-south",
+						"cf",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"resource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cloud List all records",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://cognizant-chef-recipe.us-south.cf.appdomain.cloud/api/resource",
+					"protocol": "https",
+					"host": [
+						"cognizant-chef-recipe",
+						"us-south",
+						"cf",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"resource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update record by ID",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\":\"Food\",\n\t\"name\":\"spagetti\",\n\t\"description\":\"spagetti recipe text here\",\n\t\"userID\":\"1\",\n\t\"quantity\":\"7\",\n\t\"unit\":\"pounds\",\n\t\"location\":\"Atlanta\",\n\t\"contact\":\"https://lh3.googleusercontent.com/rtbGCrnuMRBgUq2AdD2M2uZmr0s9orZGEKZPEN6kFnbwDNMC6D8_hWCu2BfF_WL7QtBAWsVWQOntwV1a67-f\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cognizant-chef-recipe.us-south.cf.appdomain.cloud/api/resource/f8e3abab-d32c-44c5-b3b3-2a50cab3d837",
+					"protocol": "https",
+					"host": [
+						"cognizant-chef-recipe",
+						"us-south",
+						"cf",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"resource",
+						"f8e3abab-d32c-44c5-b3b3-2a50cab3d837"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete record by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://cognizant-chef-recipe.us-south.cf.appdomain.cloud/api/resource/-f8e3abab-d32c-44c5-b3b3-2a50cab3d837",
+					"protocol": "https",
+					"host": [
+						"cognizant-chef-recipe",
+						"us-south",
+						"cf",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"resource",
+						"-f8e3abab-d32c-44c5-b3b3-2a50cab3d837"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find record by name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://cognizant-chef-recipe.us-south.cf.appdomain.cloud/api/resource?name=spagetti",
+					"protocol": "https",
+					"host": [
+						"cognizant-chef-recipe",
+						"us-south",
+						"cf",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"resource"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "spagetti"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send Search Req to RapidAPI for short object",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\":\"Food\",\n\t\"name\":\"spagetty\",\n\t\"description\":\"text here\",\n\t\"userID\":\"1\",\n\t\"quantity\":\"15\",\n\t\"location\":\"Atlanta\",\n\t\"contact\":\"url link here...\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cognizant-chef-recipe.us-south.cf.appdomain.cloud/api/recipes?name=chiken",
+					"protocol": "https",
+					"host": [
+						"cognizant-chef-recipe",
+						"us-south",
+						"cf",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "chiken"
+						}
+					]
+				},
+				"description": "this link can be used for optimal recipe object"
+			},
+			"response": []
+		},
+		{
+			"name": "send Search Request to RapidAPI for Complete Object",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\":\"Food\",\n\t\"name\":\"spagetty\",\n\t\"description\":\"text here\",\n\t\"userID\":\"1\",\n\t\"quantity\":\"15\",\n\t\"location\":\"Atlanta\",\n\t\"contact\":\"url link here...\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cognizant-chef-recipe.us-south.cf.appdomain.cloud/api/completerecipes?name=chiken",
+					"protocol": "https",
+					"host": [
+						"cognizant-chef-recipe",
+						"us-south",
+						"cf",
+						"appdomain",
+						"cloud"
+					],
+					"path": [
+						"api",
+						"completerecipes"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "chiken"
+						}
+					]
+				},
+				"description": "This link can be used for complete recipe object"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

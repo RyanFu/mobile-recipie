@@ -1,0 +1,10 @@
+applications:
+- name: cognizant-chef-recipe-mobile
+  ## command: npm start
+  command: npx react-native start --port=8081
+  path: .
+  memory: 256M
+  instances: 1
+  env: 
+    CF_INSTANCE_PORT: 8080
+    PORT: 8080
