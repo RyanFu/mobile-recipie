@@ -1,6 +1,8 @@
-# Pocket Chef
+# mobile-recipie
 
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://code-and-response.github.io/Project-Sample/)
+[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) 
+[![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) 
+[![Website](https://img.shields.io/badge/View-Website-blue)](https://code-and-response.github.io/Project-Sample/)
 
 A basic GitHub repository example for Call for Code submissions and those projects that join the Code and Response initiative. Not all sections or files are required. You can make this as simple or as in-depth as you need.
 
@@ -30,20 +32,20 @@ Part of the World Health Organization's guidance on limiting further spread of C
 
 ### How can technology help?
 
-Pocket Chef will allow users to search for recipes based on what categories they like, what ingredients they have, or what their diet goals are. Users can see all the ingredients and instructions for recipes they find and even save them to their cookbook. In the future we want to build a community around pocket chef and make it more interactive by allowing people to share their own recipes, like and review recipes, and even subscribe to other users! This will create a sense of community around cooking at home and people will be excited to learn new ideas and share their own.  
+mobile-recipie will allow users to search for recipes based on what categories they like, what ingredients they have, or what their diet goals are. Users can see all the ingredients and instructions for recipes they find and even save them to their cookbook. In the future we want to build a community around pocket chef and make it more interactive by allowing people to share their own recipes, like and review recipes, and even subscribe to other users! This will create a sense of community around cooking at home and people will be excited to learn new ideas and share their own.  
 
 ### The idea
 
 We want to start by simplifying the process of finding recipes. Instead of searching all over the internet for recipes that you can only save as a link we will allow users to do all their searching in one place and save all the recipes they find to a cookbook. From there we want to get users even more involved by building a sense of community around cooking at home. Allowing users to showcase their own recipes will be a fun and exciting way for them to connect with other people. Everyone in the pocket chef community will be able to review recipes, subscribe to chefs that they like, and chat with each other if they want to collaborate on new recipe ideas or cooking tips! 
 
 ## Demo video
-![](videos/PocketChefDemo.mp4)
-[Watch the video](https://gitlab.com/hackaton-recipes/recipes/-/blob/master/videos/PocketChefDemo.mp4)
 
 ## The architecture
 ![](images/architecture-diagram.png)
 
-This solution idea uses a mobile application that invokes a remote API to obtain the various recipes shown to the user. Through the mobile app, the user gains access to hundreds of recipes created by a community of users who also love cooking. By means of using RapidAPI, our solution can get recipe information from a famous recipe site called Yummly. 
+This solution idea uses a mobile application that invokes a remote API to obtain the various recipes shown to the user. 
+Through the mobile app, the user gains access to hundreds of recipes created by a community of users who also love cooking. 
+By means of using RapidAPI, our solution can get recipe information from a famous recipe site called Yummly. 
 
 Using IBM Cloud natural language processing technology (Watson Assistant),  the user can chat with his own virtual assistant who, based on a list of ingredients specified by the user, suggests the best recipes that match the query made by the user. To achieve its goal, the Watson Assistant, in conjunction with IBM Cloud Functions service, invokes the remote API to get the information of the recipes shown to the user. 
 
@@ -114,8 +116,8 @@ Server is running at http://127.0.0.1:3000/
 Response: 
 
 {
-    "api": "cognizant-chef-recipe",
-    "company": "Cognizant.com",
+    "api": "chef-recipe",
+    "company": "mycompany.com",
     "status": "ok",
     "timestamp": "2020-04-24T16:35:09.414Z"
 }
@@ -129,7 +131,7 @@ Response:
 6. To test running app use browser GET method : localhost:8081
 
 ## Running the tests
-Please see our [tests](https://gitlab.com/hackaton-recipes/recipes/-/tree/master/test) for testing
+TODO
 
 ## Live Demo
 [Home Screen](/images/Home.png)
@@ -160,15 +162,15 @@ If you like any of the recipes you see from your search, you can save them to yo
 
 ## Versioning
 
-We use [gitlab](https://gitlab.com/hackaton-recipes/recipes.git) for repository
+We use [gitlab](https://github.com/dkolpakov2/mobile-recipie/recipes.git) for repository
 
 ## Authors
 
-* Jose Campos – Cognizant 
-* Dmitry Kolpakov – Cognizant 
-* Uladzimir Zaranok – Cognizant 
-* Paul Wallace – Cognizant 
-* Jordan Senken – Cognizant 
+* Jose Campos
+* Dmitry Kolpakov
+* Uladzimir Zaranok 
+* Paul Wallace
+* Jordan Senken 
 
 ## License
 
