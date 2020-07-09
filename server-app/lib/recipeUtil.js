@@ -46,8 +46,8 @@ function jsonParser(json) {
 }
 
 const status = {
-  api: "cognizant-chef-recipe",
-  company: "Cognizant.com",
+  api: "mobile-recipe",
+  company: "mycompany.com",
   status: 'ok',
   timestamp: new Date()
 }
